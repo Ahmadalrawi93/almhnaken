@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "158078510110",
+    "project_id": "almhanken",
+    "storage_bucket": "almhanken.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158078510110:android:5a0633ac8fa8cf583e3a0f",
+        "android_client_info": {
+          "package_name": "com.alrawi.almhnaken"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX8g4aawYCAnIa88MwLG38bNVjpsmH7ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

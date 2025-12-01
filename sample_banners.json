@@ -1,0 +1,33 @@
+{
+  "banner_1": {
+    "imageUrl": "https://raw.githubusercontent.com/Ahmadalrawi93/almhnaken-assets/main/banners/banner1.png",
+    "linkUrl": "https://www.instagram.com/ahmad.alrawiii?igsh=M3BmeGJ0cTUzYjZ1&utm_source=qr",
+    "order": 1,
+    "isActive": true
+  },
+  "banner_2": {
+    "imageUrl": "https://raw.githubusercontent.com/Ahmadalrawi93/almhnaken-assets/main/banners/banner2.png",
+    "linkUrl": "https://www.instagram.com/al_askar_company?utm_source=ig_web_button_share_sheet&igsh=MXRoMG5oa3lraXRvNw==",
+    "order": 2,
+    "isActive": true
+  },
+  "banner_3": {
+    "imageUrl": "https://raw.githubusercontent.com/Ahmadalrawi93/almhnaken-assets/main/banners/banner3.png",
+    "linkUrl": "",
+    "order": 3,
+    "isActive": true
+  },
+  "banner_4": {
+    "imageUrl": "https://raw.githubusercontent.com/Ahmadalrawi93/almhnaken-assets/main/banners/banner4.png",
+    "linkUrl": "https://wa.me/9647xxxxxxxxx",
+    "order": 4,
+    "isActive": true
+  },
+  "banner_5": {
+    "imageUrl": "https://raw.githubusercontent.com/Ahmadalrawi93/almhnaken-assets/main/banners/banner5.png",
+    "linkUrl": "",
+    "order": 5,
+    "isActive": true
+  }
+}
+
