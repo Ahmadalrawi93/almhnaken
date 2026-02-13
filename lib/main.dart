@@ -30,21 +30,47 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  
+  try {
+    // تهيئة Firebase
+    await Firebase.initializeApp();
+    debugPrint('✅ Firebase تم تهيئته بنجاح');
+  } catch (e) {
+    debugPrint('❌ خطأ في تهيئة Firebase: $e');
+    // الاستمرار حتى لو فشلت تهيئة Firebase
+  }
 
-  // تهيئة Firebase Cloud Messaging للإشعارات الخلفية
-  await FirebaseNotificationService().initialize();
+  try {
+    // تهيئة Firebase Cloud Messaging للإشعارات الخلفية
+    await FirebaseNotificationService().initialize();
+    debugPrint('✅ Firebase Messaging تم تهيئته بنجاح');
+    
+    // تسجيل المستخدم لتلقي إشعارات اللعب الأونلاين
+    await FirebaseNotificationService().subscribeToTopic('online_players');
+  } catch (e) {
+    debugPrint('❌ خطأ في تهيئة Firebase Messaging: $e');
+    // الاستمرار حتى لو فشلت تهيئة الإشعارات
+  }
 
-  // تسجيل المستخدم لتلقي إشعارات اللعب الأونلاين
-  await FirebaseNotificationService().subscribeToTopic('online_players');
-
-  AdManager.instance.initialize();
-  // Pre-load an interstitial ad at app startup.
-  AdManager.instance.loadInterstitialAd();
+  try {
+    AdManager.instance.initialize();
+    // Pre-load an interstitial ad at app startup.
+    AdManager.instance.loadInterstitialAd();
+    debugPrint('✅ AdManager تم تهيئته بنجاح');
+  } catch (e) {
+    debugPrint('❌ خطأ في تهيئة AdManager: $e');
+    // الاستمرار حتى لو فشلت تهيئة الإعلانات
+  }
 
   final pointsProvider = PointsProvider();
   final quizStateProvider = QuizStateProvider();
-  await quizStateProvider.loadState();
+  
+  try {
+    await quizStateProvider.loadState();
+  } catch (e) {
+    debugPrint('❌ خطأ في تحميل حالة Quiz: $e');
+    // الاستمرار حتى لو فشل تحميل الحالة
+  }
 
   runApp(
     MultiProvider(

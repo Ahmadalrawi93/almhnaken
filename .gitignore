@@ -44,4 +44,12 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /android/key.properties 
-*.jks 
+*.jks
+
+# iOS - Firebase configuration (contains sensitive keys)
+ios/Runner/GoogleService-Info.plist
+**/GoogleService-Info.plist
+
+# iOS - CocoaPods
+ios/Podfile.lock
+ios/Pods/ 
